@@ -1,3 +1,7 @@
+/* ================================
+   GLOBAL STYLES
+================================ */
+
 * {
     margin: 0;
     padding: 0;
@@ -9,7 +13,300 @@ html {
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     background: #080b12;
+    color: #f5f7fa;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* ================================
+   NAVBAR
+================================ */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+    background: rgba(8, 11, 18, 0.75);
+    backdrop-filter: blur(16px);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+nav {
+    max-width: 1200px;
+    margin: auto;
+
+    height: 80px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 30px;
+}
+
+
+/* LOGO */
+
+.logo {
+    font-size: 1.6rem;
+    font-weight: 700;
+
     color: #ffffff;
+
+    letter-spacing: -1px;
+}
+
+
+/* NAVIGATION LINKS */
+
+nav ul {
+    display: flex;
+    align-items: center;
+
+    list-style: none;
+
+    gap: 35px;
+}
+
+nav ul li a {
+    color: #aeb6c4;
+
+    font-size: 0.95rem;
+    font-weight: 500;
+
+    transition: 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffffff;
+}
+
+
+/* ================================
+   HERO
+================================ */
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 120px 30px 80px;
+
+    position: relative;
+}
+
+
+/* BACKGROUND GLOW */
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    top: 50%;
+    right: -150px;
+
+    transform: translateY(-50%);
+
+    background: radial-gradient(
+        circle,
+        rgba(80, 100, 255, 0.18),
+        transparent 65%
+    );
+
+    filter: blur(20px);
+
+    pointer-events: none;
+}
+
+
+/* SMALL INTRO */
+
+.hero-intro {
+    color: #7c8cff;
+
+    font-size: 1rem;
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 12px;
+}
+
+
+/* NAME */
+
+.hero h1 {
+    font-size: clamp(3rem, 7vw, 6.5rem);
+
+    line-height: 1;
+
+    letter-spacing: -4px;
+
+    margin-bottom: 25px;
+
+    background: linear-gradient(
+        90deg,
+        #ffffff,
+        #aab5ff
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    color: transparent;
+}
+
+
+/* TAGLINE */
+
+.hero h2 {
+    max-width: 800px;
+
+    font-size: clamp(1.7rem, 4vw, 3.3rem);
+
+    line-height: 1.15;
+
+    font-weight: 600;
+
+    color: #a8afbd;
+
+    margin-bottom: 25px;
+}
+
+
+/* DESCRIPTION */
+
+.hero-description {
+    max-width: 650px;
+
+    color: #7f8795;
+
+    font-size: 1.05rem;
+
+    margin-bottom: 40px;
+}
+
+
+/* ================================
+   BUTTONS
+================================ */
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 13px 25px;
+
+    border-radius: 8px;
+
+    font-size: 0.95rem;
+    font-weight: 600;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        border 0.25s ease;
+}
+
+
+/* PRIMARY BUTTON */
+
+.primary-btn {
+    background: #ffffff;
+
+    color: #080b12;
+}
+
+.primary-btn:hover {
+    transform: translateY(-3px);
+
+    background: #dfe3ff;
+}
+
+
+/* SECONDARY BUTTON */
+
+.secondary-btn {
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    color: #ffffff;
+
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.secondary-btn:hover {
+    transform: translateY(-3px);
+
+    background: rgba(255, 255, 255, 0.08);
+
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 768px) {
+
+    nav {
+        height: 70px;
+
+        padding: 0 20px;
+    }
+
+    nav ul {
+        gap: 15px;
+    }
+
+    nav ul li a {
+        font-size: 0.8rem;
+    }
+
+    .hero {
+        padding: 110px 20px 60px;
+    }
+
+    .hero h1 {
+        letter-spacing: -2px;
+    }
+
+    .hero::before {
+        width: 300px;
+        height: 300px;
+
+        right: -150px;
+    }
+
 }
