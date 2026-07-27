@@ -1099,3 +1099,230 @@ nav ul li a:hover {
     }
 
 }
+/* ================================
+   EXPERIENCE & ACTIVITIES
+================================ */
+
+.experience {
+    max-width: 1200px;
+    margin: auto;
+
+    padding: 140px 30px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+
+/* SECTION HEADING */
+
+.experience-heading {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: flex-end;
+
+    gap: 50px;
+}
+
+
+.experience-heading > p {
+    max-width: 400px;
+
+    color: #7f8795;
+
+    font-size: 0.95rem;
+
+    margin-bottom: 8px;
+}
+
+
+/* ================================
+   EXPERIENCE LIST
+================================ */
+
+.experience-list {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+
+/* EXPERIENCE ITEM */
+
+.experience-item {
+    display: grid;
+
+    grid-template-columns: 140px 1fr;
+
+    gap: 40px;
+
+    padding: 45px 0;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+    transition:
+        padding-left 0.3s ease,
+        background 0.3s ease;
+}
+
+
+.experience-item:hover {
+    padding-left: 15px;
+
+    background: linear-gradient(
+        90deg,
+        rgba(124, 140, 255, 0.04),
+        transparent 60%
+    );
+}
+
+
+/* DATE */
+
+.experience-date span {
+    color: #687184;
+
+    font-family: monospace;
+
+    font-size: 0.8rem;
+}
+
+
+/* EXPERIENCE TOP */
+
+.experience-top {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    margin-bottom: 20px;
+}
+
+
+/* TYPE */
+
+.experience-type {
+    display: block;
+
+    color: #7c8cff;
+
+    font-family: monospace;
+
+    font-size: 0.7rem;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 8px;
+}
+
+
+/* TITLE */
+
+.experience-content h3 {
+    color: #f1f3f7;
+
+    font-size: 1.6rem;
+
+    letter-spacing: -0.5px;
+}
+
+
+/* ROLE */
+
+.experience-role {
+    color: #9aa2b1;
+
+    font-size: 0.85rem;
+
+    text-align: right;
+}
+
+
+/* DESCRIPTION */
+
+.experience-content > p {
+    max-width: 700px;
+
+    color: #818a9a;
+
+    font-size: 0.95rem;
+
+    line-height: 1.8;
+
+    margin-bottom: 25px;
+}
+
+
+/* TAGS */
+
+.experience-tags {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+}
+
+
+.experience-tags span {
+    padding: 6px 10px;
+
+    color: #aab2c0;
+
+    font-size: 0.72rem;
+
+    border-radius: 5px;
+
+    background: rgba(255, 255, 255, 0.035);
+
+    border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+
+/* ================================
+   EXPERIENCE RESPONSIVE
+================================ */
+
+@media (max-width: 850px) {
+
+    .experience {
+        padding: 100px 20px;
+    }
+
+
+    .experience-heading {
+        display: block;
+    }
+
+
+    .experience-heading > p {
+        margin-top: 25px;
+    }
+
+
+    .experience-item {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+
+        padding: 35px 0;
+    }
+
+
+    .experience-item:hover {
+        padding-left: 0;
+    }
+
+
+    .experience-top {
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+
+    .experience-role {
+        text-align: left;
+    }
+
+}
