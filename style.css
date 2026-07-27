@@ -310,3 +310,162 @@ nav ul li a:hover {
     }
 
 }
+
+/* ================================
+   ABOUT SECTION
+================================ */
+
+.about {
+    max-width: 1200px;
+    margin: auto;
+
+    padding: 140px 30px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+
+/* SECTION HEADING */
+
+.section-heading {
+    margin-bottom: 80px;
+}
+
+.section-heading span {
+    display: block;
+
+    color: #7c8cff;
+
+    font-size: 0.8rem;
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 15px;
+}
+
+.section-heading h2 {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+
+    line-height: 1.1;
+
+    letter-spacing: -2px;
+
+    max-width: 700px;
+}
+
+
+/* ABOUT LAYOUT */
+
+.about-grid {
+    display: grid;
+
+    grid-template-columns: 1.3fr 1fr;
+
+    gap: 100px;
+}
+
+
+/* ABOUT TEXT */
+
+.about-text {
+    max-width: 650px;
+}
+
+.about-text p {
+    color: #8992a3;
+
+    font-size: 1.05rem;
+
+    margin-bottom: 25px;
+}
+
+.about-text .about-lead {
+    color: #e7e9ef;
+
+    font-size: 1.5rem;
+
+    line-height: 1.5;
+
+    font-weight: 500;
+}
+
+
+/* INTERESTS */
+
+.interests-label {
+    color: #626b7b;
+
+    font-size: 0.75rem;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 20px;
+}
+
+
+.interest-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    padding: 18px 0;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+    transition: 0.25s ease;
+}
+
+.interest-item:first-of-type {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+
+.interest-item span {
+    color: #586173;
+
+    font-size: 0.75rem;
+
+    font-family: monospace;
+}
+
+
+.interest-item p {
+    color: #cbd0da;
+
+    font-size: 1rem;
+}
+
+
+.interest-item:hover {
+    padding-left: 10px;
+}
+
+.interest-item:hover p {
+    color: #ffffff;
+}
+
+
+/* ABOUT RESPONSIVE */
+
+@media (max-width: 850px) {
+
+    .about {
+        padding: 100px 20px;
+    }
+
+    .section-heading {
+        margin-bottom: 50px;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+
+        gap: 60px;
+    }
+
+}
